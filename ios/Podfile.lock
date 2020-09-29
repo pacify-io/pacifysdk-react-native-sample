@@ -101,6 +101,7 @@ PODS:
     - PromiseKit/CorePromise (= 6.10.0)
     - PromiseKit/UIKit (= 6.10.0)
     - Reachability (~> 3.2)
+    - React
     - SimpleKeychain (~> 0.7.0)
     - SVProgressHUD (~> 2.1.2)
     - "UITextView+Placeholder (~> 1.3.3)"
@@ -505,7 +506,7 @@ SPEC CHECKSUMS:
   glog: 40a13f7840415b9a77023fbcae0f1e6f43192af3
   Kingfisher: 176d377ad339113c99ad4980cbae687f807e20fe
   OpenSSL-Universal: 8b48cc0d10c1b2923617dfe5c178aa9ed2689355
-  PacifySDK: d1a4130985527e02a5675f69953edbf030b96d14
+  PacifySDK: 946b1fd6f68553fdaf4db40915c2c9ecf6248d59
   PromiseKit: 1fdaeb6c0a94a5114fcb814ff3d772b86886ad4e
   RCTRequired: 48884c74035a0b5b76dbb7a998bd93bcfc5f2047
   RCTTypeSafety: edf4b618033c2f1c5b7bc3d90d8e085ed95ba2ab

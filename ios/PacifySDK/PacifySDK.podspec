@@ -13,7 +13,7 @@ Pod::Spec.new do |spec|
     }
     spec.author  = { 'Pacify' => 'pacify-support@masslight.com' }
     spec.source  = { :http => 'https://s3.amazonaws.com/pacifysdk/releases/1.0.9/PacifySDK-1.0.9.zip' }
-
+    spec.source_files = '**/*.{h,m}'
     spec.vendored_frameworks = 'PacifySDK.framework'
 
     spec.dependency 'PromiseKit/CorePromise', '= 6.10.0'
@@ -36,4 +36,6 @@ Pod::Spec.new do |spec|
     spec.dependency 'UITextView+Placeholder', '~> 1.3.3'
     spec.dependency 'AWSMobileAnalytics', '= 2.10.3'
     spec.dependency 'AWSMobileAnalytics', '= 2.10.3'
+    spec.dependency 'React'
+
 end

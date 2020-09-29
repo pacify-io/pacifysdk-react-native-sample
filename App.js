@@ -5,8 +5,8 @@
  * @format
  * @flow strict-local
  */
-let CocoapodExample = require('react-native').NativeModules.CocoapodExample;
-let { random } = CocoapodExample;
+let PacifySDK = require('react-native').NativeModules.PacifySDK;
+let { random } = PacifySDK;
 
 import React, { useState } from 'react';
 import {
