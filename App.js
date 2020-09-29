@@ -5,8 +5,10 @@
  * @format
  * @flow strict-local
  */
+let CocoapodExample = require('react-native').NativeModules.CocoapodExample;
+let { random } = CocoapodExample;
 
-import React from 'react';
+import React, { useState } from 'react';
 import {
   SafeAreaView,
   StyleSheet,
@@ -14,6 +16,7 @@ import {
   View,
   Text,
   StatusBar,
+  Button
 } from 'react-native';
 
 import {
@@ -25,6 +28,16 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 const App: () => React$Node = () => {
+
+  const [rand, setRand] = useState();
+
+  const generateRandomNumber = (num = 1024) => {
+    random(num, (err, res) => {
+      if (err) setRand(-1)
+      else setRand(res)
+    })
+  }
+
   return (
     <>
       <StatusBar barStyle="dark-content" />
@@ -45,6 +58,12 @@ const App: () => React$Node = () => {
                 Edit <Text style={styles.highlight}>App.js</Text> to change this
                 screen and then come back to see your edits.
               </Text>
+              <Button
+                title="Generate Random Number"
+                color="#f194ff"
+                onPress={() => generateRandomNumber()}
+              />
+              <Text>{(rand) ? rand : ''}</Text>
             </View>
             <View style={styles.sectionContainer}>
               <Text style={styles.sectionTitle}>See Your Changes</Text>

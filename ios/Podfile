@@ -8,6 +8,8 @@ target 'pacifySDK_rn' do
 
   use_react_native!(:path => config["reactNativePath"])
 
+  pod 'CocoapodExample', :path => './CocoapodExample/CocoapodExample.podspec'
+
   target 'pacifySDK_rnTests' do
     inherit! :complete
     # Pods for testing
