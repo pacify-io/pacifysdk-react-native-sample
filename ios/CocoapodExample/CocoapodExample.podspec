@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.author       = "sean7218"
   s.homepage     = "https://masslight.com"
   s.license      = "MIT"
-  s.platform     = :ios, "10.0"
+  s.platform     = :ios, "12.0"
   s.source       = { :http => 'file:' + __dir__ + '/' }
   s.source_files = '**/*.{h,m}'
   s.dependency "React"

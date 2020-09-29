@@ -1,7 +1,7 @@
 require_relative '../node_modules/react-native/scripts/react_native_pods'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
-platform :ios, '10.0'
+platform :ios, '12.0'
 
 target 'pacifySDK_rn' do
   config = use_native_modules!
@@ -9,6 +9,7 @@ target 'pacifySDK_rn' do
   use_react_native!(:path => config["reactNativePath"])
 
   pod 'CocoapodExample', :path => './CocoapodExample/CocoapodExample.podspec'
+  pod 'PacifySDK', :path => './PacifySDK/PacifySDK.podspec'
 
   target 'pacifySDK_rnTests' do
     inherit! :complete

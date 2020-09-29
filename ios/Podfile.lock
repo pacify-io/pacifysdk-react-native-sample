@@ -1,10 +1,25 @@
 PODS:
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AWSCore (2.10.3)
+  - AWSMobileAnalytics (2.10.3):
+    - AWSCore (= 2.10.3)
   - boost-for-react-native (1.63.0)
   - CocoaAsyncSocket (7.6.4)
   - CocoaLibEvent (1.0.0)
+  - CocoaLumberjack/Core (3.5.3)
+  - CocoaLumberjack/Swift (3.5.3):
+    - CocoaLumberjack/Core
   - CocoapodExample (1.0.0):
     - React
+  - DeviceKit (1.11.0)
   - DoubleConversion (1.1.6)
+  - EDStarRating (1.1)
   - FBLazyVector (0.63.3)
   - FBReactNativeSpec (0.63.3):
     - Folly (= 2020.01.13.00)
@@ -69,15 +84,37 @@ PODS:
     - DoubleConversion
     - glog
   - glog (0.3.5)
+  - Kingfisher (5.7.1)
   - OpenSSL-Universal (1.0.2.19):
     - OpenSSL-Universal/Static (= 1.0.2.19)
   - OpenSSL-Universal/Static (1.0.2.19)
+  - PacifySDK (1.0.9):
+    - AFNetworking/NSURLSession (~> 3.2.0)
+    - AFNetworking/Reachability (~> 3.2.0)
+    - AFNetworking/Security (~> 3.2.0)
+    - AFNetworking/Serialization (~> 3.2.0)
+    - AWSMobileAnalytics (= 2.10.3)
+    - CocoaLumberjack/Swift (= 3.5.3)
+    - DeviceKit (~> 1.11.0)
+    - EDStarRating (~> 1.1)
+    - Kingfisher (= 5.7.1)
+    - PromiseKit/CorePromise (= 6.10.0)
+    - PromiseKit/UIKit (= 6.10.0)
+    - Reachability (~> 3.2)
+    - SimpleKeychain (~> 0.7.0)
+    - SVProgressHUD (~> 2.1.2)
+    - "UITextView+Placeholder (~> 1.3.3)"
+    - zipzap (~> 8.1.1)
+  - PromiseKit/CorePromise (6.10.0)
+  - PromiseKit/UIKit (6.10.0):
+    - PromiseKit/CorePromise
   - RCTRequired (0.63.3)
   - RCTTypeSafety (0.63.3):
     - FBLazyVector (= 0.63.3)
     - Folly (= 2020.01.13.00)
     - RCTRequired (= 0.63.3)
     - React-Core (= 0.63.3)
+  - Reachability (3.2)
   - React (0.63.3):
     - React-Core (= 0.63.3)
     - React-Core/DevSupport (= 0.63.3)
@@ -298,9 +335,13 @@ PODS:
     - React-Core (= 0.63.3)
     - React-cxxreact (= 0.63.3)
     - React-jsi (= 0.63.3)
+  - SimpleKeychain (0.7.0)
+  - SVProgressHUD (2.1.2)
+  - "UITextView+Placeholder (1.3.3)"
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
     - Yoga (~> 1.14)
+  - zipzap (8.1.1)
 
 DEPENDENCIES:
   - CocoapodExample (from `./CocoapodExample/CocoapodExample.podspec`)
@@ -328,6 +369,7 @@ DEPENDENCIES:
   - FlipperKit/SKIOSNetworkPlugin (~> 0.54.0)
   - Folly (from `../node_modules/react-native/third-party-podspecs/Folly.podspec`)
   - glog (from `../node_modules/react-native/third-party-podspecs/glog.podspec`)
+  - PacifySDK (from `./PacifySDK/PacifySDK.podspec`)
   - RCTRequired (from `../node_modules/react-native/Libraries/RCTRequired`)
   - RCTTypeSafety (from `../node_modules/react-native/Libraries/TypeSafety`)
   - React (from `../node_modules/react-native/`)
@@ -354,9 +396,15 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - AFNetworking
+    - AWSCore
+    - AWSMobileAnalytics
     - boost-for-react-native
     - CocoaAsyncSocket
     - CocoaLibEvent
+    - CocoaLumberjack
+    - DeviceKit
+    - EDStarRating
     - Flipper
     - Flipper-DoubleConversion
     - Flipper-Folly
@@ -364,8 +412,15 @@ SPEC REPOS:
     - Flipper-PeerTalk
     - Flipper-RSocket
     - FlipperKit
+    - Kingfisher
     - OpenSSL-Universal
+    - PromiseKit
+    - Reachability
+    - SimpleKeychain
+    - SVProgressHUD
+    - "UITextView+Placeholder"
     - YogaKit
+    - zipzap
 
 EXTERNAL SOURCES:
   CocoapodExample:
@@ -380,6 +435,8 @@ EXTERNAL SOURCES:
     :podspec: "../node_modules/react-native/third-party-podspecs/Folly.podspec"
   glog:
     :podspec: "../node_modules/react-native/third-party-podspecs/glog.podspec"
+  PacifySDK:
+    :path: "./PacifySDK/PacifySDK.podspec"
   RCTRequired:
     :path: "../node_modules/react-native/Libraries/RCTRequired"
   RCTTypeSafety:
@@ -424,11 +481,17 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  AWSCore: f9b8a30d9e8ec07d1a6dd8f0ec5fe84b6a215041
+  AWSMobileAnalytics: 79cbbb5d45f0f916d8860f346bad1d7a3d4d38f3
   boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
   CocoaAsyncSocket: 694058e7c0ed05a9e217d1b3c7ded962f4180845
   CocoaLibEvent: 2fab71b8bd46dd33ddb959f7928ec5909f838e3f
-  CocoapodExample: d251a91f89bf82b9db50ebdc757ed81111184ca2
+  CocoaLumberjack: 2f44e60eb91c176d471fdba43b9e3eae6a721947
+  CocoapodExample: a28009b9a0169c51e74da6e20e224da3a5f3ac0a
+  DeviceKit: a3a86f8dddbe1317a9a243cdf9646858bf135dce
   DoubleConversion: cde416483dac037923206447da6e1454df403714
+  EDStarRating: a41a6440a945020745d0e9ff8ada7d1afa952114
   FBLazyVector: 878b59e31113e289e275165efbe4b54fa614d43d
   FBReactNativeSpec: 7da9338acfb98d4ef9e5536805a0704572d33c2f
   Flipper: be611d4b742d8c87fbae2ca5f44603a02539e365
@@ -440,9 +503,13 @@ SPEC CHECKSUMS:
   FlipperKit: ab353d41aea8aae2ea6daaf813e67496642f3d7d
   Folly: b73c3869541e86821df3c387eb0af5f65addfab4
   glog: 40a13f7840415b9a77023fbcae0f1e6f43192af3
+  Kingfisher: 176d377ad339113c99ad4980cbae687f807e20fe
   OpenSSL-Universal: 8b48cc0d10c1b2923617dfe5c178aa9ed2689355
+  PacifySDK: d1a4130985527e02a5675f69953edbf030b96d14
+  PromiseKit: 1fdaeb6c0a94a5114fcb814ff3d772b86886ad4e
   RCTRequired: 48884c74035a0b5b76dbb7a998bd93bcfc5f2047
   RCTTypeSafety: edf4b618033c2f1c5b7bc3d90d8e085ed95ba2ab
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   React: f36e90f3ceb976546e97df3403e37d226f79d0e3
   React-callinvoker: 18874f621eb96625df7a24a7dc8d6e07391affcd
   React-Core: ac3d816b8e3493970153f4aaf0cff18af0bb95e6
@@ -461,9 +528,13 @@ SPEC CHECKSUMS:
   React-RCTText: 65a6de06a7389098ce24340d1d3556015c38f746
   React-RCTVibration: 8e9fb25724a0805107fc1acc9075e26f814df454
   ReactCommon: 4167844018c9ed375cc01a843e9ee564399e53c3
+  SimpleKeychain: b50cef3b87939d480ea1143425c00f5b4b70fe21
+  SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
+  "UITextView+Placeholder": c407b27599ea23cca425946fee3cf1db5d547008
   Yoga: 7d13633d129fd179e01b8953d38d47be90db185a
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
+  zipzap: 940162d9c9c60472c2eab341385e4214da0fdf1c
 
-PODFILE CHECKSUM: 504b99e0ccf2c5a7d2a36f7921ab0400956b9ae1
+PODFILE CHECKSUM: 2ede18175c77b21b727be4562eab13b5ae426570
 
 COCOAPODS: 1.9.3
