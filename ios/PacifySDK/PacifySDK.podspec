@@ -34,7 +34,5 @@ Pod::Spec.new do |spec|
     spec.dependency 'EDStarRating', '~> 1.1'
     spec.dependency 'UITextView+Placeholder', '~> 1.3.3'
     spec.dependency 'AWSMobileAnalytics', '= 2.10.3'
-    spec.dependency 'AWSMobileAnalytics', '= 2.10.3'
-    spec.dependency 'React'
 
 end
