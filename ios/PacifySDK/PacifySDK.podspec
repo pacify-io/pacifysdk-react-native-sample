@@ -12,8 +12,8 @@ Pod::Spec.new do |spec|
     :text => "Copyright Pacify Health, LLC. All rights reserved. Use of this software is subject to the terms and conditions of the Pacify Health, LLC Terms of Service."
     }
     spec.author  = { 'Pacify' => 'pacify-support@masslight.com' }
-    spec.source  = { :http => 'https://s3.amazonaws.com/pacifysdk/releases/1.0.9/PacifySDK-1.0.9.zip' }
-    spec.source_files = '**/*.{h,m}'
+    spec.source  = { :http => 'file:' + '/Users/sean7218/ml/pacify_ios/PacifySDK/Archived/Release-universal/PacifySDK.framework' }
+    spec.source_files = 'ios/**/*.{h,m,mm}'
     spec.vendored_frameworks = 'PacifySDK.framework'
 
     spec.dependency 'PromiseKit/CorePromise', '= 6.10.0'

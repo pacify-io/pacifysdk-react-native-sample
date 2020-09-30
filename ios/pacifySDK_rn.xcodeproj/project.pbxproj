@@ -17,6 +17,8 @@
 		2DCD954D1E0B4F2C00145EB5 /* pacifySDK_rnTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* pacifySDK_rnTests.m */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		988D041D0B7BE838AB248057 /* libPods-pacifySDK_rn-pacifySDK_rnTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FF4F54FA8012D3D4F2D2AE20 /* libPods-pacifySDK_rn-pacifySDK_rnTests.a */; };
+		C3587FCC252524F900D70AB5 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3587FCB252524F900D70AB5 /* Counter.swift */; };
+		C3587FCE2525254C00D70AB5 /* Counter.m in Sources */ = {isa = PBXBuildFile; fileRef = C3587FCD2525254C00D70AB5 /* Counter.m */; };
 		E5AB212A7E23AB1F8AEEB8E0 /* libPods-pacifySDK_rn.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A6710EDE2F275AF6236A5F2 /* libPods-pacifySDK_rn.a */; };
 		E7091C1117DAF1C0858D8D97 /* libPods-pacifySDK_rn-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 91CA3D5D8D3497EB32442F17 /* libPods-pacifySDK_rn-tvOS.a */; };
 		FC0787720395B5F803C4E4DC /* libPods-pacifySDK_rn-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55FBE9C4A57974DE57540388 /* libPods-pacifySDK_rn-tvOSTests.a */; };
@@ -61,6 +63,9 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = pacifySDK_rn/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91CA3D5D8D3497EB32442F17 /* libPods-pacifySDK_rn-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-pacifySDK_rn-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		964F0BEFA27D644A9A86533E /* Pods-pacifySDK_rn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pacifySDK_rn.debug.xcconfig"; path = "Target Support Files/Pods-pacifySDK_rn/Pods-pacifySDK_rn.debug.xcconfig"; sourceTree = "<group>"; };
+		C3587FCA252524F900D70AB5 /* pacifySDK_rn-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "pacifySDK_rn-Bridging-Header.h"; sourceTree = "<group>"; };
+		C3587FCB252524F900D70AB5 /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
+		C3587FCD2525254C00D70AB5 /* Counter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Counter.m; sourceTree = "<group>"; };
 		C5A5E9D2EC7A5A4A89621C86 /* Pods-pacifySDK_rn-pacifySDK_rnTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pacifySDK_rn-pacifySDK_rnTests.debug.xcconfig"; path = "Target Support Files/Pods-pacifySDK_rn-pacifySDK_rnTests/Pods-pacifySDK_rn-pacifySDK_rnTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CCB8EF4408DAC133D75B22AA /* Pods-pacifySDK_rn-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pacifySDK_rn-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-pacifySDK_rn-tvOS/Pods-pacifySDK_rn-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -132,6 +137,9 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				C3587FCB252524F900D70AB5 /* Counter.swift */,
+				C3587FCD2525254C00D70AB5 /* Counter.m */,
+				C3587FCA252524F900D70AB5 /* pacifySDK_rn-Bridging-Header.h */,
 			);
 			name = pacifySDK_rn;
 			sourceTree = "<group>";
@@ -194,7 +202,6 @@
 				F212BE9BA51C98CC18F52C45 /* Pods-pacifySDK_rn-tvOSTests.debug.xcconfig */,
 				5FC199CEB47D38D62B18057C /* Pods-pacifySDK_rn-tvOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -294,7 +301,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1140;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -572,8 +579,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3587FCE2525254C00D70AB5 /* Counter.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				C3587FCC252524F900D70AB5 /* Counter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -614,6 +623,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C5A5E9D2EC7A5A4A89621C86 /* Pods-pacifySDK_rn-pacifySDK_rnTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -637,6 +647,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 09E832AA467190D4D18B6FD0 /* Pods-pacifySDK_rn-pacifySDK_rnTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = pacifySDK_rnTests/Info.plist;
@@ -670,6 +681,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = pacifySDK_rn;
+				SWIFT_OBJC_BRIDGING_HEADER = "pacifySDK_rn-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -692,6 +704,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = pacifySDK_rn;
+				SWIFT_OBJC_BRIDGING_HEADER = "pacifySDK_rn-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};

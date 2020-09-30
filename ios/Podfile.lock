@@ -506,7 +506,7 @@ SPEC CHECKSUMS:
   glog: 40a13f7840415b9a77023fbcae0f1e6f43192af3
   Kingfisher: 176d377ad339113c99ad4980cbae687f807e20fe
   OpenSSL-Universal: 8b48cc0d10c1b2923617dfe5c178aa9ed2689355
-  PacifySDK: 946b1fd6f68553fdaf4db40915c2c9ecf6248d59
+  PacifySDK: fb5009142c55e189e62218125d1a44aac4e9b7f9
   PromiseKit: 1fdaeb6c0a94a5114fcb814ff3d772b86886ad4e
   RCTRequired: 48884c74035a0b5b76dbb7a998bd93bcfc5f2047
   RCTTypeSafety: edf4b618033c2f1c5b7bc3d90d8e085ed95ba2ab
