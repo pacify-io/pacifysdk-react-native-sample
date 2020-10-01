@@ -5,10 +5,9 @@
  * @format
  * @flow strict-local
  */
-let PacifySDK = require('react-native').NativeModules.PacifySDK;
+
 let Counter = require('react-native').NativeModules.Counter;
-// let { random } = PacifySDK;
-let { increment, hello, callPacify } = Counter;
+let { increment, hello } = Counter;
 
 console.log(Counter);
 import React, { useState } from 'react';
@@ -40,7 +39,7 @@ const App: () => React$Node = () => {
       console.log("Count: ", value);
     })
 
-    callPacify();
+    // callPacify();
   }
 
   return (
