@@ -8,8 +8,9 @@
 let PacifySDK = require('react-native').NativeModules.PacifySDK;
 let Counter = require('react-native').NativeModules.Counter;
 // let { random } = PacifySDK;
-let { increment, hello } = Counter;
+let { increment, hello, callPacify } = Counter;
 
+console.log(Counter);
 import React, { useState } from 'react';
 import {
   SafeAreaView,
@@ -38,10 +39,8 @@ const App: () => React$Node = () => {
     increment((value) => {
       console.log("Count: ", value);
     })
-    // random(num, (err, res) => {
-    //   if (err) setRand(-1)
-    //   else setRand(res)
-    // })
+
+    callPacify();
   }
 
   return (
