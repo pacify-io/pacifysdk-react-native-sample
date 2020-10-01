@@ -57,7 +57,7 @@ class Counter: NSObject {
        
     print("calling pacify from main thread")
     DispatchQueue.main.async {
-      Pacify.call(apiKey: apiKey, userToken: token, coupon: coupon, userData: userData, settings: settings, delegate: nil)
+      Pacify.call(apiKey: apiKey, userToken: token, coupon: nil, userData: userData, settings: settings, delegate: nil)
     }
      
    }
