@@ -12,17 +12,16 @@ target 'pacifySDK_rn' do
   pod 'PromiseKit/UIKit', '= 6.10.0'
   pod 'SVProgressHUD', '~> 2.1.2'
   pod 'Reachability', '~> 3.2'
-#  
-#  pod 'SimpleKeychain', '~> 0.7.0'
-#  pod 'CocoaLumberjack/Swift', '= 3.5.3'
-#  pod 'zipzap', '~> 8.1.1'
-#  pod 'DeviceKit', '~> 1.11.0'
-#
-#  pod 'EDStarRating', '~> 1.1'
-#  pod 'UITextView+Placeholder', '~> 1.3.3'
-#  pod 'AWSMobileAnalytics', '= 2.10.3'
-#
-#  pod 'AFNetworking', '~> 3.2.0', :subspecs => ['Reachability', 'Serialization', 'Security', 'NSURLSession']
+  
+  pod 'SimpleKeychain', '~> 0.7.0'
+  pod 'CocoaLumberjack/Swift', '= 3.5.3'
+  pod 'zipzap', '~> 8.1.1'
+  pod 'DeviceKit', '~> 1.11.0'
+
+  pod 'EDStarRating', '~> 1.1'
+  pod 'UITextView+Placeholder', '~> 1.3.3'
+  pod 'AWSMobileAnalytics', '= 2.10.3'
+  pod 'AFNetworking', '~> 3.2.0', :subspecs => ['Reachability', 'Serialization', 'Security', 'NSURLSession']
 #  pod 'PacifySDK', :podspec => './PacifySDK/PacifySDK.podspec'
 
   
