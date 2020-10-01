@@ -6,12 +6,10 @@ PODS:
   - AFNetworking/Reachability (3.2.1)
   - AFNetworking/Security (3.2.1)
   - AFNetworking/Serialization (3.2.1)
-  - AWSCore (2.10.3)
-  - AWSMobileAnalytics (2.10.3):
-    - AWSCore (= 2.10.3)
+  - AWSCore (2.11.1)
+  - AWSMobileAnalytics (2.11.1):
+    - AWSCore (= 2.11.1)
   - boost-for-react-native (1.63.0)
-  - CocoaAsyncSocket (7.6.4)
-  - CocoaLibEvent (1.0.0)
   - CocoaLumberjack/Core (3.5.3)
   - CocoaLumberjack/Swift (3.5.3):
     - CocoaLumberjack/Core
@@ -26,52 +24,6 @@ PODS:
     - React-Core (= 0.63.3)
     - React-jsi (= 0.63.3)
     - ReactCommon/turbomodule/core (= 0.63.3)
-  - Flipper (0.54.0):
-    - Flipper-Folly (~> 2.2)
-    - Flipper-RSocket (~> 1.1)
-  - Flipper-DoubleConversion (1.1.7)
-  - Flipper-Folly (2.2.0):
-    - boost-for-react-native
-    - CocoaLibEvent (~> 1.0)
-    - Flipper-DoubleConversion
-    - Flipper-Glog
-    - OpenSSL-Universal (= 1.0.2.19)
-  - Flipper-Glog (0.3.6)
-  - Flipper-PeerTalk (0.0.4)
-  - Flipper-RSocket (1.1.0):
-    - Flipper-Folly (~> 2.2)
-  - FlipperKit (0.54.0):
-    - FlipperKit/Core (= 0.54.0)
-  - FlipperKit/Core (0.54.0):
-    - Flipper (~> 0.54.0)
-    - FlipperKit/CppBridge
-    - FlipperKit/FBCxxFollyDynamicConvert
-    - FlipperKit/FBDefines
-    - FlipperKit/FKPortForwarding
-  - FlipperKit/CppBridge (0.54.0):
-    - Flipper (~> 0.54.0)
-  - FlipperKit/FBCxxFollyDynamicConvert (0.54.0):
-    - Flipper-Folly (~> 2.2)
-  - FlipperKit/FBDefines (0.54.0)
-  - FlipperKit/FKPortForwarding (0.54.0):
-    - CocoaAsyncSocket (~> 7.6)
-    - Flipper-PeerTalk (~> 0.0.4)
-  - FlipperKit/FlipperKitHighlightOverlay (0.54.0)
-  - FlipperKit/FlipperKitLayoutPlugin (0.54.0):
-    - FlipperKit/Core
-    - FlipperKit/FlipperKitHighlightOverlay
-    - FlipperKit/FlipperKitLayoutTextSearchable
-    - YogaKit (~> 1.18)
-  - FlipperKit/FlipperKitLayoutTextSearchable (0.54.0)
-  - FlipperKit/FlipperKitNetworkPlugin (0.54.0):
-    - FlipperKit/Core
-  - FlipperKit/FlipperKitReactPlugin (0.54.0):
-    - FlipperKit/Core
-  - FlipperKit/FlipperKitUserDefaultsPlugin (0.54.0):
-    - FlipperKit/Core
-  - FlipperKit/SKIOSNetworkPlugin (0.54.0):
-    - FlipperKit/Core
-    - FlipperKit/FlipperKitNetworkPlugin
   - Folly (2020.01.13.00):
     - boost-for-react-native
     - DoubleConversion
@@ -83,9 +35,23 @@ PODS:
     - glog
   - glog (0.3.5)
   - Kingfisher (5.7.1)
-  - OpenSSL-Universal (1.0.2.19):
-    - OpenSSL-Universal/Static (= 1.0.2.19)
-  - OpenSSL-Universal/Static (1.0.2.19)
+  - PacifySDK (1.0.9):
+    - AFNetworking/NSURLSession (~> 3.2.0)
+    - AFNetworking/Reachability (~> 3.2.0)
+    - AFNetworking/Security (~> 3.2.0)
+    - AFNetworking/Serialization (~> 3.2.0)
+    - AWSMobileAnalytics (= 2.11.1)
+    - CocoaLumberjack/Swift (= 3.5.3)
+    - DeviceKit (~> 1.11.0)
+    - EDStarRating (~> 1.1)
+    - Kingfisher (= 5.7.1)
+    - PromiseKit/CorePromise (= 6.10.0)
+    - PromiseKit/UIKit (= 6.10.0)
+    - Reachability (~> 3.2)
+    - SimpleKeychain (~> 0.7.0)
+    - SVProgressHUD (~> 2.1.2)
+    - "UITextView+Placeholder (~> 1.3.3)"
+    - zipzap (~> 8.1.1)
   - PromiseKit/CorePromise (6.10.0)
   - PromiseKit/UIKit (6.10.0):
     - PromiseKit/CorePromise
@@ -318,51 +284,21 @@ PODS:
     - React-jsi (= 0.63.3)
   - SimpleKeychain (0.7.0)
   - SVProgressHUD (2.1.2)
+  - TwilioVideo (1.3.6)
   - "UITextView+Placeholder (1.3.3)"
   - Yoga (1.14.0)
-  - YogaKit (1.18.1):
-    - Yoga (~> 1.14)
   - zipzap (8.1.1)
 
 DEPENDENCIES:
-  - AFNetworking/NSURLSession (~> 3.2.0)
-  - AFNetworking/Reachability (~> 3.2.0)
-  - AFNetworking/Security (~> 3.2.0)
-  - AFNetworking/Serialization (~> 3.2.0)
-  - AWSMobileAnalytics (= 2.10.3)
-  - CocoaLumberjack/Swift (= 3.5.3)
-  - DeviceKit (~> 1.11.0)
   - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
-  - EDStarRating (~> 1.1)
   - FBLazyVector (from `../node_modules/react-native/Libraries/FBLazyVector`)
   - FBReactNativeSpec (from `../node_modules/react-native/Libraries/FBReactNativeSpec`)
-  - Flipper (~> 0.54.0)
-  - Flipper-DoubleConversion (= 1.1.7)
-  - Flipper-Folly (~> 2.2)
-  - Flipper-Glog (= 0.3.6)
-  - Flipper-PeerTalk (~> 0.0.4)
-  - Flipper-RSocket (~> 1.1)
-  - FlipperKit (~> 0.54.0)
-  - FlipperKit/Core (~> 0.54.0)
-  - FlipperKit/CppBridge (~> 0.54.0)
-  - FlipperKit/FBCxxFollyDynamicConvert (~> 0.54.0)
-  - FlipperKit/FBDefines (~> 0.54.0)
-  - FlipperKit/FKPortForwarding (~> 0.54.0)
-  - FlipperKit/FlipperKitHighlightOverlay (~> 0.54.0)
-  - FlipperKit/FlipperKitLayoutPlugin (~> 0.54.0)
-  - FlipperKit/FlipperKitLayoutTextSearchable (~> 0.54.0)
-  - FlipperKit/FlipperKitNetworkPlugin (~> 0.54.0)
-  - FlipperKit/FlipperKitReactPlugin (~> 0.54.0)
-  - FlipperKit/FlipperKitUserDefaultsPlugin (~> 0.54.0)
-  - FlipperKit/SKIOSNetworkPlugin (~> 0.54.0)
   - Folly (from `../node_modules/react-native/third-party-podspecs/Folly.podspec`)
   - glog (from `../node_modules/react-native/third-party-podspecs/glog.podspec`)
   - Kingfisher (= 5.7.1)
-  - PromiseKit/CorePromise (= 6.10.0)
-  - PromiseKit/UIKit (= 6.10.0)
+  - PacifySDK (= 1.0.9)
   - RCTRequired (from `../node_modules/react-native/Libraries/RCTRequired`)
   - RCTTypeSafety (from `../node_modules/react-native/Libraries/TypeSafety`)
-  - Reachability (~> 3.2)
   - React (from `../node_modules/react-native/`)
   - React-callinvoker (from `../node_modules/react-native/ReactCommon/callinvoker`)
   - React-Core (from `../node_modules/react-native/`)
@@ -383,11 +319,8 @@ DEPENDENCIES:
   - React-RCTText (from `../node_modules/react-native/Libraries/Text`)
   - React-RCTVibration (from `../node_modules/react-native/Libraries/Vibration`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
-  - SimpleKeychain (~> 0.7.0)
-  - SVProgressHUD (~> 2.1.2)
-  - "UITextView+Placeholder (~> 1.3.3)"
+  - TwilioVideo (= 1.3.6)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
-  - zipzap (~> 8.1.1)
 
 SPEC REPOS:
   trunk:
@@ -395,26 +328,17 @@ SPEC REPOS:
     - AWSCore
     - AWSMobileAnalytics
     - boost-for-react-native
-    - CocoaAsyncSocket
-    - CocoaLibEvent
     - CocoaLumberjack
     - DeviceKit
     - EDStarRating
-    - Flipper
-    - Flipper-DoubleConversion
-    - Flipper-Folly
-    - Flipper-Glog
-    - Flipper-PeerTalk
-    - Flipper-RSocket
-    - FlipperKit
     - Kingfisher
-    - OpenSSL-Universal
+    - PacifySDK
     - PromiseKit
     - Reachability
     - SimpleKeychain
     - SVProgressHUD
+    - TwilioVideo
     - "UITextView+Placeholder"
-    - YogaKit
     - zipzap
 
 EXTERNAL SOURCES:
@@ -473,28 +397,19 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  AWSCore: f9b8a30d9e8ec07d1a6dd8f0ec5fe84b6a215041
-  AWSMobileAnalytics: 79cbbb5d45f0f916d8860f346bad1d7a3d4d38f3
+  AWSCore: 00093a1ff49b5d6ce5f1e4d83fe301486fc5034d
+  AWSMobileAnalytics: 7daacd515dc8d6458079d8cdbdf950255d1105a7
   boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
-  CocoaAsyncSocket: 694058e7c0ed05a9e217d1b3c7ded962f4180845
-  CocoaLibEvent: 2fab71b8bd46dd33ddb959f7928ec5909f838e3f
   CocoaLumberjack: 2f44e60eb91c176d471fdba43b9e3eae6a721947
   DeviceKit: a3a86f8dddbe1317a9a243cdf9646858bf135dce
   DoubleConversion: cde416483dac037923206447da6e1454df403714
   EDStarRating: a41a6440a945020745d0e9ff8ada7d1afa952114
   FBLazyVector: 878b59e31113e289e275165efbe4b54fa614d43d
   FBReactNativeSpec: 7da9338acfb98d4ef9e5536805a0704572d33c2f
-  Flipper: be611d4b742d8c87fbae2ca5f44603a02539e365
-  Flipper-DoubleConversion: 38631e41ef4f9b12861c67d17cb5518d06badc41
-  Flipper-Folly: c12092ea368353b58e992843a990a3225d4533c3
-  Flipper-Glog: 1dfd6abf1e922806c52ceb8701a3599a79a200a6
-  Flipper-PeerTalk: 116d8f857dc6ef55c7a5a75ea3ceaafe878aadc9
-  Flipper-RSocket: 64e7431a55835eb953b0bf984ef3b90ae9fdddd7
-  FlipperKit: ab353d41aea8aae2ea6daaf813e67496642f3d7d
   Folly: b73c3869541e86821df3c387eb0af5f65addfab4
   glog: 40a13f7840415b9a77023fbcae0f1e6f43192af3
   Kingfisher: 176d377ad339113c99ad4980cbae687f807e20fe
-  OpenSSL-Universal: 8b48cc0d10c1b2923617dfe5c178aa9ed2689355
+  PacifySDK: 6bedee0a5d5e0031473f50d79b1ef3c2dabd512c
   PromiseKit: 1fdaeb6c0a94a5114fcb814ff3d772b86886ad4e
   RCTRequired: 48884c74035a0b5b76dbb7a998bd93bcfc5f2047
   RCTTypeSafety: edf4b618033c2f1c5b7bc3d90d8e085ed95ba2ab
@@ -519,11 +434,11 @@ SPEC CHECKSUMS:
   ReactCommon: 4167844018c9ed375cc01a843e9ee564399e53c3
   SimpleKeychain: b50cef3b87939d480ea1143425c00f5b4b70fe21
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
+  TwilioVideo: 97d034e42351d151cc56c6901396a97c356eac2f
   "UITextView+Placeholder": c407b27599ea23cca425946fee3cf1db5d547008
   Yoga: 7d13633d129fd179e01b8953d38d47be90db185a
-  YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
   zipzap: 940162d9c9c60472c2eab341385e4214da0fdf1c
 
-PODFILE CHECKSUM: 2ad8c4745a95bb5827bdf48245562280d2b3bf95
+PODFILE CHECKSUM: b1b1f5370bc0c5ba0b159b181d018c9a7ebd3b41
 
 COCOAPODS: 1.9.3
