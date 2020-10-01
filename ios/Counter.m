@@ -10,6 +10,7 @@
 @interface RCT_EXTERN_MODULE(Counter, NSObject)
 
 RCT_EXTERN_METHOD(hello)
+RCT_EXTERN_METHOD(callPacify)
 RCT_EXTERN_METHOD(increment: (RCTResponseSenderBlock)callback)
 
 + (BOOL)requiresMainQueueSetup {
