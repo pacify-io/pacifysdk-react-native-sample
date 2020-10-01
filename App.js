@@ -7,7 +7,7 @@
  */
 let PacifySDK = require('react-native').NativeModules.PacifySDK;
 let Counter = require('react-native').NativeModules.Counter;
-let { random } = PacifySDK;
+// let { random } = PacifySDK;
 let { increment, hello } = Counter;
 
 import React, { useState } from 'react';
@@ -38,10 +38,10 @@ const App: () => React$Node = () => {
     increment((value) => {
       console.log("Count: ", value);
     })
-    random(num, (err, res) => {
-      if (err) setRand(-1)
-      else setRand(res)
-    })
+    // random(num, (err, res) => {
+    //   if (err) setRand(-1)
+    //   else setRand(res)
+    // })
   }
 
   return (
