@@ -6,12 +6,6 @@
  * @flow strict-local
  */
 
-// import { requireNativeComponent } from 'react-native';
-// let RCTImageView = requireNativeComponent('RCTImageView');
-// console.log(RCTImageView);
-let requireNativeComponent = require('react-native').requireNativeComponent; 
-console.log(requireNativeComponent);
-let ImageView = requireNativeComponent("RCTImageView");
 let Counter = require('react-native').NativeModules.Counter;
 let { increment, hello, callPacify } = Counter;
 
