@@ -79,7 +79,7 @@ public class Counter extends ReactContextBaseJavaModule implements PacifySdk.Pac
         );
 
         final TokensInfo tokensInfo = new TokensInfo(
-                new Token("8271740bb0ded5e1ff42258c794920e7"),
+                new Token("API_KEY"),
                 new Token("valid_98772")
         );
 
@@ -93,13 +93,6 @@ public class Counter extends ReactContextBaseJavaModule implements PacifySdk.Pac
                 Color.ofRgb(255, 255, 255),
                 Color.ofRgb(76, 0, 82),
                 reactContext.getDrawable(R.drawable.dummy_user)
-//                Color.ofHexString("#F9F9F9"),
-//                Color.ofHexString("#FDD97B"),
-//                Color.ofHexString("#CC000000"),
-//                Color.ofHexString("#8F6292"),
-//                Color.ofHexString("#FFFFFF"),
-//                Color.ofHexString("#4C0052"),
-//                Resources.getSystem().getDrawable(R.drawable.dummy_user)
         );
         final PacifySdkSettings pacifySettings = new PacifySdkSettings(
                 pacifyAppearance,
@@ -111,14 +104,14 @@ public class Counter extends ReactContextBaseJavaModule implements PacifySdk.Pac
         );
 
         Coupon coupon = Coupon.create("your coupon");
-        PacifySdk.call(
-                reactContext,
-                tokensInfo,
-                coupon,
-                pacifyUserData,
-                pacifySettings,
-                this
-        );
+//        PacifySdk.call(
+//                reactContext,
+//                tokensInfo,
+//                coupon,
+//                pacifyUserData,
+//                pacifySettings,
+//                this
+//        );
 
     }
 
