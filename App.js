@@ -7,7 +7,7 @@
  */
 
 let Counter = require('react-native').NativeModules.Counter;
-let { increment, hello } = Counter;
+let { increment, hello, callPacify } = Counter;
 
 console.log(Counter);
 import React, { useState } from 'react';
@@ -39,7 +39,7 @@ const App: () => React$Node = () => {
       console.log("Count: ", value);
     })
 
-    // callPacify();
+    callPacify();
   }
 
   return (
