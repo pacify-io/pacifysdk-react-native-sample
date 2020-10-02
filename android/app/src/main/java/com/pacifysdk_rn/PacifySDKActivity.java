@@ -3,8 +3,6 @@ package com.pacifysdk_rn;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.CallSuper;
@@ -12,11 +10,6 @@ import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 
 import com.facebook.react.ReactActivity;
-import com.facebook.react.ReactInstanceManager;
-import com.facebook.react.ReactNativeHost;
-import com.facebook.react.bridge.CatalystInstance;
-import com.facebook.react.bridge.ReactContext;
-import com.facebook.react.bridge.WritableNativeArray;
 import com.masslight.lib.pacifysdk.sdk.PacifySdk;
 import com.masslight.lib.pacifysdk.sdk.entity.PacifyEnvironment;
 import com.masslight.lib.pacifysdk.sdk.entity.PacifySdkSettings;
@@ -51,7 +44,7 @@ public class PacifySDKActivity extends ReactActivity implements PacifySdk.Pacify
     @CallSuper
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.pacify_sdk_activity);
+        setContentView(R.layout.pacify_sdk_activity_react_native);
     }
 
 
