@@ -18,9 +18,9 @@ class PacifySDKModule: NSObject {
     
     print("Args");
     print(args);
-    let apiKey = args["apiKey"] as? String ?? ""
-    let userToken = args["apiKey"] as? String ?? ""
-    let coupon = args["apiKey"] as? String ?? nil
+    let apiKey:String = args["apiKey"] as? String ?? ""
+    let userToken:String = args["userToken"] as? String ?? ""
+    let coupon:String? = args["coupon"] as? String ?? nil
     
     print(apiKey)
     print(userToken)
