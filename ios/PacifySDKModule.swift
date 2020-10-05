@@ -11,19 +11,19 @@ import UIKit
 import PacifySDK
 
 
-@objc(Counter)
-class Counter: NSObject {
-  
-
-  
-  private var count = 0
-  
+@objc(PacifySDKModule)
+class PacifySDKModule: NSObject {
   @objc
-   func callPacify () {
-     let apiKey = ""
-     let token =  ""
-     let coupon = ""
-       
+  func callPacify (_ args: NSDictionary, callback cb: RCTResponseSenderBlock) {
+    
+    print("Args");
+    print(args);
+    let apiKey = args["apiKey"] as? String ?? ""
+    let userToken = args["apiKey"] as? String ?? ""
+    let coupon = args["apiKey"] as? String ?? nil
+    
+    print(apiKey)
+    print(userToken)
      let userData = PacifyUserData(
          firstName: "Nick",
          lastName: "Bos", // optional, used for payment only
@@ -57,28 +57,12 @@ class Counter: NSObject {
        
     print("calling pacify from main thread")
     DispatchQueue.main.async {
-      Pacify.call(apiKey: apiKey, userToken: token, coupon: nil, userData: userData, settings: settings, delegate: nil)
-    }
-     
-   }
-  
-  @objc
-  func hello() {
-    print("say hello")
-  }
-  
-  @objc
-  func increment(_ callback: RCTResponseSenderBlock) {
-    DispatchQueue.main.async {
-      let myImageView: UIImageView = UIImageView();
-      let url = URL(string: "https://i.imgur.com/6N3EnGu.png")
-      myImageView.kf.setImage(with: url)
+      Pacify.call(apiKey: apiKey, userToken: userToken, coupon: coupon, userData: userData, settings: settings, delegate: nil)
     }
     
-    count += 1
-    print("count is \(count)")
-    callback([
-      count
+    cb([
+      "pacifyCalled"
     ])
-  }
+   }
+
 }

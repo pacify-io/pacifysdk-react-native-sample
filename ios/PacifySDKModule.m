@@ -7,11 +7,9 @@
 
 #import <Foundation/Foundation.h>
 #import "React/RCTBridgeModule.h"
-@interface RCT_EXTERN_MODULE(Counter, NSObject)
+@interface RCT_EXTERN_MODULE(PacifySDKModule, NSObject)
 
-RCT_EXTERN_METHOD(hello)
-RCT_EXTERN_METHOD(callPacify)
-RCT_EXTERN_METHOD(increment: (RCTResponseSenderBlock)callback)
+RCT_EXTERN_METHOD(callPacify:(NSDictionary *)args callback:(RCTResponseSenderBlock)callback)
 
 + (BOOL)requiresMainQueueSetup {
     return NO;

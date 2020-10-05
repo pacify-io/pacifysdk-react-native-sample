@@ -6,8 +6,8 @@
  * @flow strict-local
  */
 
-let Counter = require('react-native').NativeModules.Counter;
-let { increment, hello, callPacify } = Counter;
+let PacifySDKModule = require('react-native').NativeModules.PacifySDKModule;
+let { callPacify } = PacifySDKModule;
 
 import React, { useState } from 'react';
 import {
@@ -17,7 +17,8 @@ import {
   View,
   Text,
   StatusBar,
-  Button
+  Button,
+  TextInput
 } from 'react-native';
 
 import {
@@ -30,15 +31,18 @@ import {
 
 const App: () => React$Node = () => {
 
-  const [rand, setRand] = useState();
+  const [apiKey, setApiKey] = useState()
+  const [userToken, setUserToken] = useState()
+  const [coupon, setCoupon] = useState()
 
-  const generateRandomNumber = (num = 1024) => {
-    console.log(hello);
-    increment((value) => {
-      console.log("Count: ", value);
-    })
+  const args = {
+    apiKey: apiKey,
+    userToken: userToken,
+    coupon: coupon,
+  }
 
-    callPacify();
+  const callbackFn = (value) => {
+    console.log("callback function", value);
   }
 
   return (
@@ -56,17 +60,26 @@ const App: () => React$Node = () => {
           )}
           <View style={styles.body}>
             <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Step One</Text>
-              <Text style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.js</Text> to change this
-                screen and then come back to see your edits.
-              </Text>
+              <TextInput 
+                value={apiKey}
+                placeholder="API_KEY"
+                onChangeText={p => setApiKey(p)}
+                />
+              <TextInput
+                value={userToken}
+                placeholder="USER_TOKEN"
+                onChangeText={p => setUserToken(p)}
+                />
+              <TextInput
+                value={coupon}
+                placeholder="COUPON"
+                onChangeText={p => setCoupon(p)}
+                />
               <Button
-                title="Generate Random Number"
+                title="Start PacifySDK"
                 color="#f194ff"
-                onPress={() => generateRandomNumber()}
+                onPress={() => callPacify(args, callbackFn)}
               />
-              <Text>{(rand) ? rand : ''}</Text>
             </View>
             <View style={styles.sectionContainer}>
               <Text style={styles.sectionTitle}>See Your Changes</Text>
