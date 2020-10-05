@@ -1,5 +1,6 @@
 package com.pacifysdk_rn;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -50,7 +51,16 @@ public class PacifySDKActivity extends ReactActivity implements PacifySdk.Pacify
 
     public void startPacifySDK(View view) {
         Log.i(TAG, "Start PacifySDK");
-        Toast.makeText(PacifySDKActivity.this, "Start PacifySDK", Toast.LENGTH_SHORT).show();
+
+        Intent myIntent = getIntent();
+        String apiKey = myIntent.getStringExtra("apiKey");
+        String userToken= myIntent.getStringExtra("userToken");
+        String coupon = myIntent.getStringExtra("coupon");
+
+
+        Toast.makeText(PacifySDKActivity.this, String.format("Start Pacify SDK %s", apiKey), Toast.LENGTH_SHORT).show();
+
+
         final PacifyUserData pacifyUserData = new PacifyUserData(
                 "First Name",
                 "Last Name", // optional, used for payment only
@@ -58,8 +68,8 @@ public class PacifySDKActivity extends ReactActivity implements PacifySdk.Pacify
         );
 
         final TokensInfo tokensInfo = new TokensInfo(
-                new Token("8271740bb0ded5e1ff42258c794920e7"),
-                new Token("valid_98772")
+                new Token(apiKey),
+                new Token(userToken)
         );
 
         final PacifySupportInfo pacifySupportInfo = new PacifySupportInfo("support@company.com", "1234567890");
@@ -82,15 +92,12 @@ public class PacifySDKActivity extends ReactActivity implements PacifySdk.Pacify
                 Currency.USD // pass in appropriate currency with every launch.
         );
 
-        Coupon coupon = Coupon.create("your coupon");
-
-
-
+        Coupon sCoupon = Coupon.create("your coupon");
 
         PacifySdk.call(
             PacifySDKActivity.this,
             tokensInfo,
-            coupon,
+                sCoupon,
             pacifyUserData,
             pacifySettings,
             this

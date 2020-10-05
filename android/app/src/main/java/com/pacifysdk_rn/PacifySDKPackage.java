@@ -6,26 +6,22 @@ import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.uimanager.ViewManager;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
 
-public class CounterPackage implements ReactPackage {
+public class PacifySDKPackage implements ReactPackage {
 
     @Override
     public List<ViewManager> createViewManagers(ReactApplicationContext reactContext) {
-        return Arrays.<ViewManager>asList(new ReactImageManager(reactContext));
+        return Collections.emptyList();
     }
 
     @Override
     public List<NativeModule> createNativeModules(
             ReactApplicationContext reactContext) {
-        List<NativeModule> modules = new ArrayList<>();
-
-        modules.add(new Counter(reactContext));
-
-        return modules;
-    }
-
+                List<NativeModule> modules = new ArrayList<>();
+                 modules.add(new PacifySDKModule(reactContext));
+                return modules;
+            }
 }
